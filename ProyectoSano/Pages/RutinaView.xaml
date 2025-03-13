@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoSano.Pages.RutinaView"
+             Title="RutinaView"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid RowDefinitions="2.5*,7.1*,0.4*" Padding="0,0,0,15">
+        <Grid Grid.Row="0" Padding="10" HorizontalOptions="Center" VerticalOptions="Center">
+            <Image Source="{Binding Image2}" Aspect="AspectFill" WidthRequest="240"/>
+        </Grid>
+
+        <Grid Grid.Row="1" Padding="20,0">
+            <StackLayout Spacing="15">
+                <Grid>
+                    <Label Text="{Binding Titulo}" FontSize="24" FontAttributes="Bold" TextColor="#ec268f" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,0,0,5"/>
+                    <Border VerticalOptions="End" HeightRequest="5" BackgroundColor="#ec268f" WidthRequest="200"/>
+                </Grid>
+
+                <Label Text="{Binding Subtitulo}" TextColor="#000000" FontAttributes="Bold" FontSize="18" VerticalTextAlignment="Center"/>
+
+                <Grid RowDefinitions="auto,auto">
+                    <Label Grid.Row="0" Text="Posición inicial:" TextColor="#000000" FontAttributes="Bold" FontSize="18" VerticalOptions="Center"/>
+                    <CollectionView Grid.Row="1" x:Name="Posiciones" ItemsSource="{Binding PosicionInicial}">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="1" VerticalItemSpacing="3"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Label Text="{Binding}" TextColor="#595959" FontSize="16"/>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
+
+                <Grid RowDefinitions="auto,auto">
+                    <Label Grid.Row="0" Text="Ejecución del movimiento:" TextColor="#000000" FontAttributes="Bold" FontSize="18" VerticalOptions="Center"/>
+                    <CollectionView Grid.Row="1" x:Name="Movimientos" ItemsSource="{Binding Movimientos}">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="1" VerticalItemSpacing="3"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Label Text="{Binding}" TextColor="#595959" FontSize="16"/>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
+
+                <Grid RowDefinitions="auto,auto">
+                    <Label Grid.Row="0" Text="Respiración:" TextColor="#000000" FontAttributes="Bold" FontSize="18" VerticalOptions="Center"/>
+                    <CollectionView Grid.Row="1" x:Name="Respiraciones" ItemsSource="{Binding Respiraciones}">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="1" VerticalItemSpacing="3"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Label Text="{Binding}" TextColor="#595959" FontSize="16"/>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
+
+                <Grid RowDefinitions="auto,auto">
+                    <Label Grid.Row="0" Text="Repeticiones:" TextColor="#000000" FontAttributes="Bold" FontSize="18" VerticalOptions="Center"/>
+                    <CollectionView Grid.Row="1" x:Name="Repeticiones" ItemsSource="{Binding Repeticiones}">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="1" VerticalItemSpacing="3"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Label Text="{Binding}" TextColor="#595959" FontSize="16"/>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
+            </StackLayout>
+        </Grid>
+
+        <Grid Grid.Row="2" HorizontalOptions="Center">
+            <Frame Grid.Row="2" Background="Transparent" BorderColor="Black" CornerRadius="6" Padding="60,0">
+                <Grid ColumnDefinitions="auto,45" ColumnSpacing="8" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Image Grid.Column="1" Source="dotnet_bot.png"/>
+                    <Label Grid.Column="0" Text="Contactanos" TextColor="Black" FontSize="20" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                </Grid>
+            </Frame>
+        </Grid>
+    </Grid>
+</ContentPage>

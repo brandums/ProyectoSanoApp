@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoSano.Pages.AdminPage"
+             Title="AdminPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid>
+        <Grid RowDefinitions="1.5*,8.5*" Padding="0, 10">
+            <Grid Grid.Row="0" RowDefinitions="6.5*,3.5*" RowSpacing="8">
+                <Grid Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Image Source="logo.jpg"/>
+                </Grid>
+
+                <Frame Grid.Row="1" Padding="0" CornerRadius="0" HasShadow="True" BorderColor="Transparent">
+                    <Frame.Shadow>
+                        <Shadow Brush="Black" Radius="10" Opacity="0.5" Offset="0,9"/>
+                    </Frame.Shadow>
+                    <Grid BackgroundColor="LightGray">
+                        <Grid x:Name="category" ColumnDefinitions="auto,auto,auto,auto,auto" HorizontalOptions="Center">
+                            <Label Grid.Column="0" Text="Receta" TextColor="#a8cf45" FontSize="16" FontAttributes="Bold" Padding="8" BackgroundColor="White">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnCategoryTapped" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Border x:Name="recetaBorder" IsVisible="True" Grid.Column="0" Grid.ColumnSpan="1" HeightRequest="5" VerticalOptions="End" BackgroundColor="#a8cf45"></Border>
+
+                            <Label Grid.Column="1" Text="Alimenctacion" TextColor="#ec268f" FontSize="16" FontAttributes="Bold" Padding="8">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnCategoryTapped" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Border x:Name="alimentacionBorder" IsVisible="False" Grid.Column="1" Grid.ColumnSpan="1" HeightRequest="5" VerticalOptions="End" BackgroundColor="#a8cf45"></Border>
+
+                            <Label Grid.Column="2" Text="Producto" TextColor="#ec268f" FontSize="16" FontAttributes="Bold" Padding="8">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnCategoryTapped" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Border x:Name="productoBorder" IsVisible="False" Grid.Column="2" Grid.ColumnSpan="1" HeightRequest="5" VerticalOptions="End" BackgroundColor="#a8cf45"></Border>
+
+                            <Label Grid.Column="3" Text="Video" TextColor="#ec268f" FontSize="16" FontAttributes="Bold" Padding="8">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnCategoryTapped" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Border x:Name="videoBorder" IsVisible="False" Grid.Column="3" Grid.ColumnSpan="1" HeightRequest="5" VerticalOptions="End" BackgroundColor="#a8cf45"></Border>
+
+                            <Label Grid.Column="4" Text="Rutina" TextColor="#ec268f" FontSize="16" FontAttributes="Bold" Padding="8">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnCategoryTapped" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Border x:Name="rutinaBorder" IsVisible="False" Grid.Column="4" Grid.ColumnSpan="1" HeightRequest="5" VerticalOptions="End" BackgroundColor="#a8cf45"></Border>
+                        </Grid>
+                    </Grid>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <ScrollView x:Name="RecetaForm" IsVisible="True">
+                    <StackLayout Padding="20">
+                        <Entry x:Name="NombreEntry" Placeholder="Nombre" />
+                        <Entry x:Name="SubtituloEntry" Placeholder="Subtitulo" />
+
+                        <Entry x:Name="IngredienteCountEntry" Placeholder="Cantidad de Ingredientes" Keyboard="Numeric"
+                               TextChanged="OnIngredienteCountChanged" />
+
+                        <StackLayout x:Name="IngredientesStack" />
+
+                        <Entry x:Name="PreparacionCountEntry" Placeholder="Cantidad de Pasos de Preparación" Keyboard="Numeric"
+                               TextChanged="OnPreparacionCountChanged" />
+
+                        <StackLayout x:Name="PreparacionStack" />
+
+                        <Picker x:Name="CategoriaPicker" Title="Seleccione una Categoría">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Desayunos</x:String>
+                                    <x:String>Almuerzos</x:String>
+                                    <x:String>Ensaladas</x:String>
+                                    <x:String>Postres</x:String>
+                                    <x:String>Cenas</x:String>
+                                    <x:String>Otros</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+
+                        <Button Text="Seleccionar Imagen Receta" Clicked="OnSelectRecetaImageClicked" />
+                        <Image x:Name="SelectedImage" HeightRequest="200" Aspect="AspectFill" />
+
+                        <Button Text="Guardar Receta" Clicked="OnSaveRecetaClicked" />
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView x:Name="AlimentacionForm" IsVisible="False">
+                    <StackLayout Padding="20">
+                        <Entry x:Name="TituloEntry" Placeholder="Título" />
+                        <Entry x:Name="DesayunoEntry" Placeholder="Desayuno" />
+                        <Entry x:Name="AlmuerzoEntry" Placeholder="Almuerzo" />
+                        <Entry x:Name="CenaEntry" Placeholder="Cena" />
+
+                        <Picker x:Name="UsuarioPicker" Title="Seleccione un Usuario">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Brandon Arenas</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+
+                        <Button Text="Guardar Alimentación" Clicked="OnSaveAlimentacionClicked" />
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView x:Name="ProductoForm" IsVisible="False">
+                    <StackLayout Padding="20">
+                        <Entry x:Name="ProductoTituloEntry" Placeholder="Título del Producto" />
+
+                        <Picker x:Name="ProductoCategoriaPicker" Title="Seleccione una Categoría">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Gustos</x:String>
+                                    <x:String>Soluciones</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+
+                        <Entry x:Name="ProductoPrecioEntry" Placeholder="Precio" Keyboard="Numeric" />
+
+                        <Button Text="Seleccionar Imagen Producto" Clicked="OnSelectProductoImageClicked" />
+                        <Image x:Name="ProductoSelectedImage" HeightRequest="200" Aspect="AspectFill" />
+
+                        <Button Text="Guardar Producto" Clicked="OnSaveProductoClicked" />
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView x:Name="VideoForm" IsVisible="False">
+                    <StackLayout Padding="20">
+                        <Entry x:Name="VideoTituloEntry" Placeholder="Título del Video" />
+                        <Entry x:Name="VideoUrlEntry" Placeholder="Url del Video" />
+
+                        <Button Text="Guardar Video" Clicked="OnSaveVideoClicked" />
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView x:Name="RutinaForm" IsVisible="False">
+                    <StackLayout Padding="20">
+                        <Entry x:Name="RutinaNombreEntry" Placeholder="Nombre" />
+                        <Entry x:Name="RutinaTituloEntry" Placeholder="Título" />
+                        <Entry x:Name="RutinaSubtituloEntry" Placeholder="Subtítulo" />
+
+                        <Picker x:Name="RutinaDiaPicker" Title="Seleccione un Día">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Lunes</x:String>
+                                    <x:String>Martes</x:String>
+                                    <x:String>Miercoles</x:String>
+                                    <x:String>Jueves</x:String>
+                                    <x:String>Viernes</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+
+                        <Picker x:Name="RutinaUserIdPicker" Title="Seleccione un Usuario">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Brandon Arenas</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+
+                        <Entry x:Name="PosicionInicialCountEntry" Placeholder="¿Cuántas posiciones?" Keyboard="Numeric" Completed="OnPosicionInicialCountCompleted" />
+                        <StackLayout x:Name="PosicionInicialStack" />
+
+                        <Entry x:Name="MovimientosCountEntry" Placeholder="¿Cuántos movimientos?" Keyboard="Numeric" Completed="OnMovimientosCountCompleted" />
+                        <StackLayout x:Name="MovimientosStack" />
+
+                        <Entry x:Name="RespiracionesCountEntry" Placeholder="¿Cuántas respiraciones?" Keyboard="Numeric" Completed="OnRespiracionesCountCompleted" />
+                        <StackLayout x:Name="RespiracionesStack" />
+
+                        <Entry x:Name="RepeticionesCountEntry" Placeholder="¿Cuántas repeticiones?" Keyboard="Numeric" Completed="OnRepeticionesCountCompleted" />
+                        <StackLayout x:Name="RepeticionesStack" />
+
+                        <Button Text="Seleccionar Imagen 1 de video" Clicked="OnSelectVideoImage1Clicked" />
+                        <Image x:Name="RutinaSelectedImage1" HeightRequest="200" Aspect="AspectFill" />
+
+                        <Button Text="Seleccionar Imagen 2 de video" Clicked="OnSelectVideoImage2Clicked" />
+                        <Image x:Name="RutinaSelectedImage2" HeightRequest="200" Aspect="AspectFill" />
+
+                        <Button Text="Guardar Rutina" Clicked="OnSaveRutinaClicked" />
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>

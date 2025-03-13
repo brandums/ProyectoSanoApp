@@ -1,0 +1,140 @@
+is_global = true
+build_property.TargetFramework = net8.0-windows10.0.19041.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ProyectoSano
+build_property.ProjectDir = C:\Users\brran\source\repos\ProyectoSano\ProyectoSano\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTAotOptimizerEnabled = true
+build_property.CsWinRTAotExportsEnabled = 
+build_property.CsWinRTRcwFactoryFallbackGeneratorForceOptIn = 
+build_property.CsWinRTRcwFactoryFallbackGeneratorForceOptOut = 
+build_property.CsWinRTCcwLookupTableGeneratorEnabled = true
+build_property.CsWinRTMergeReferencedActivationFactories = 
+build_property.CsWinRTAotWarningLevel = 
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/Pages/AdminPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.Pages.AdminPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\AdminPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\AdminPage.xaml
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/Pages/EscuelaVerde.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.Pages.EscuelaVerde.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\EscuelaVerde.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\EscuelaVerde.xaml
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/Pages/Home.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.Pages.Home.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Home.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Home.xaml
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/Pages/Home2.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.Pages.Home2.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Home2.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Home2.xaml
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/Pages/Login.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.Pages.Login.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Login.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Login.xaml
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/Pages/Placeres.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.Pages.Placeres.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Placeres.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Placeres.xaml
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/Pages/PlanAlimentacion.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.Pages.PlanAlimentacion.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\PlanAlimentacion.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\PlanAlimentacion.xaml
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/Pages/Problemas.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.Pages.Problemas.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Problemas.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Problemas.xaml
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/Pages/ProductView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.Pages.ProductView.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ProductView.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ProductView.xaml
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/Pages/RecetasPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.Pages.RecetasPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\RecetasPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\RecetasPage.xaml
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/Pages/RecetaView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.Pages.RecetaView.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\RecetaView.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\RecetaView.xaml
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/Pages/Retos.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.Pages.Retos.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Retos.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Retos.xaml
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/Pages/RutinasPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.Pages.RutinasPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\RutinasPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\RutinasPage.xaml
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/Pages/RutinaView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.Pages.RutinaView.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\RutinaView.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\RutinaView.xaml
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/Pages/Talleres.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.Pages.Talleres.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Talleres.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Talleres.xaml
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/brran/source/repos/ProyectoSano/ProyectoSano/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoSano.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

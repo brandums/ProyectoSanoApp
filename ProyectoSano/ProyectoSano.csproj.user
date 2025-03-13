@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
+    <ActiveDebugFramework>net8.0-android</ActiveDebugFramework>
+    <ActiveDebugProfile>Samsung SM-G610M (Android 7.0 - API 24)</ActiveDebugProfile>
+    <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
+    <DefaultDevice>nexus_6p_-_api_33</DefaultDevice>
+  </PropertyGroup>
+  <ItemGroup>
+    <MauiXaml Update="Pages\AdminPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Pages\EscuelaVerde.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Home.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Home2.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Login.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Placeres.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Pages\PlanAlimentacion.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Problemas.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Pages\ProductView.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Pages\RecetasPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Pages\RecetaView.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Retos.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Pages\RutinasPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Pages\RutinaView.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Talleres.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="App.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="AppShell.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="MainPage.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Platforms\Windows\App.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Platforms\Windows\Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Resources\Styles\Colors.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Resources\Styles\Styles.xaml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoSano.Pages.Placeres"
+             Title="Placeres"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid>
+        <Grid RowDefinitions="2*,7.6*,0.4*" Padding="0,0,0,10">
+            <Grid Grid.Row="0" RowDefinitions="5.8*,4.2*" Padding="0">
+                <Grid Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" Padding="15">
+                    <Image Source="logo.jpg" Aspect="AspectFill"/>
+                </Grid>
+
+                <Grid Grid.Row="1" BackgroundColor="LightGray" Padding="40,0">
+                    <Label Text="Date un gusto sin afectar tu salud. Disfruta de la versión saludable de tus productos favoritos" TextColor="Red" FontSize="18" FontAttributes="Bold" 
+                           VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Grid.Shadow>
+                        <Shadow Brush="Black" Radius="25" Opacity="0.4" Offset="0,6"/>
+                    </Grid.Shadow>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="1" Padding="20">
+                <Grid RowDefinitions="1.7*,8.3*" RowSpacing="15">
+                    <Grid Grid.Row="0" Padding="2,0">
+                        <Label Text="Podíamos optimizar esto para que compres online pero preferimos generar un puesto de trabajo para alguien que te atienda. Si quieres comprar algo solo haz click en contactarnos y di que productos quieres que te envíen"
+                               TextColor="#000000" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                        <Border VerticalOptions="End" HeightRequest="4" WidthRequest="180" BackgroundColor="Black"/>
+                    </Grid>
+
+                    <CollectionView Grid.Row="1" x:Name="Productos" ItemsSource="{Binding ProductosList}">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="3" HorizontalItemSpacing="8" VerticalItemSpacing="10"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid BackgroundColor="White"  Padding="0" HeightRequest="125">
+                                    <Grid RowDefinitions="6.5*,3.5*" Padding="0.5,0,0.5,5">
+                                        <Frame Grid.Row="1" BorderColor="White" Padding="0,20,0,0" CornerRadius="0" HeightRequest="60" HasShadow="True" Margin="0,-14,0,0">
+                                            <Frame.Shadow>
+                                                <Shadow Brush="Black" Radius="25" Opacity="0.4" Offset="0,3"/>
+                                            </Frame.Shadow>
+                                            <StackLayout>
+                                                <Label Text="{Binding Titulo}" FontSize="15" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" LineHeight="0.7" TextColor="#000000"/>
+                                                <Label Text="{Binding Precio, StringFormat='${0:N0}'}" FontSize="15" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Red"/>
+                                            </StackLayout>
+                                        </Frame>
+
+                                        <Frame Grid.Row="0" CornerRadius="20" BorderColor="Transparent" Padding="0">
+                                            <Image Source="{Binding Imagen}" Aspect="AspectFill"/>
+                                        </Frame>
+                                    </Grid>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="2" HorizontalOptions="Center" Background="White">
+                <Frame Grid.Row="2" Background="Transparent" BorderColor="Black" CornerRadius="6" Padding="60,0">
+                    <Grid ColumnDefinitions="auto,45" ColumnSpacing="8" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image Grid.Column="1" Source="dotnet_bot.png"/>
+                        <Label Grid.Column="0" Text="Contactanos" TextColor="Black" FontSize="20" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>

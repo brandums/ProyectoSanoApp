@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoSano.Pages.ProductView"
+             Title="ProductView"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid RowDefinitions="1*,9*" BackgroundColor="Gray">
+        <Grid Grid.Row="0">
+            <Frame BackgroundColor="#aace46" BorderColor="#aace46" CornerRadius="15"></Frame>
+            <Grid BackgroundColor="#aace46" HeightRequest="50" VerticalOptions="Start"></Grid>
+
+            <Grid ColumnDefinitions="15,*" Padding="15" VerticalOptions="Center">
+                <Image Grid.Column="0" Source="back.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnBackButtonTapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Label Grid.ColumnSpan="2" Text="{Binding Title}" HorizontalOptions="Center" TextColor="White" FontSize="20" FontAttributes="Bold"/>
+                <Image Grid.Column="1" Source="menu_dots.png" HorizontalOptions="End" HeightRequest="20"/>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1" RowDefinitions="6*,1.5*,2.5*" Padding="15,20,15,0" RowSpacing="15">
+            <Frame Grid.Row="0" BackgroundColor="White" BorderColor="Transparent" CornerRadius="15" Padding="15">
+                <Grid RowDefinitions="6*,4*">
+                    <Frame Grid.Row="0" BorderColor="Transparent" BackgroundColor="Gray" CornerRadius="15" Padding="0">
+                        <Image  Aspect="AspectFill" Source="{Binding Image}"/>
+                    </Frame>
+
+                    <Grid Grid.Row="1" RowDefinitions="6*,4*">
+                        <Grid Grid.Row="0" RowDefinitions="*,*,*" Padding="0,10">
+                            <Label Grid.Row="0" Text="{Binding Title}" FontSize="18" FontAttributes="Bold"/>
+
+                            <Grid Grid.Row="1" ColumnDefinitions="10,*" ColumnSpacing="8">
+                                <Image Grid.Column="0" Source="marker_gray.png"/>
+                                <Label Grid.Column="1" Text="{Binding Address}" FontSize="15" TextColor="Gray" VerticalOptions="Center"/>
+                            </Grid>
+
+                            <Label Grid.Row="2" Text="{Binding Price, StringFormat='{0:C} /mo'}" FontSize="20" FontAttributes="Bold" TextColor="#aace46" HorizontalOptions="End"/>
+                        </Grid>
+                        <Border Grid.Row="0" VerticalOptions="End" BackgroundColor="Gray" HeightRequest="1"/>
+
+                        <Grid Grid.Row="1" Padding="0,8">
+                            <Label Text="{Binding Description}" TextColor="Black" Opacity="0.7"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Frame>
+
+            <Frame Grid.Row="1" BorderColor="Transparent" CornerRadius="15" Padding="0">
+                <Grid ColumnDefinitions="60,*,40,40" ColumnSpacing="10" Padding="15">
+                    <Frame Grid.Column="0" BackgroundColor="Gray" BorderColor="Transparent" CornerRadius="15"></Frame>
+
+                    <Grid Grid.Column="1" RowDefinitions="5*,5*" Padding="0,10">
+                        <Label Grid.Row="0" Text="Gideon Guernsey" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+                        <Label Grid.Row="1" Text="Home Owner" VerticalOptions="Center" Opacity="0.7"/>
+                    </Grid>
+
+                    <Button Grid.Column="2" HeightRequest="40" ImageSource="phone.png" BackgroundColor="#eb268f"></Button>
+                    <Button Grid.Column="3" HeightRequest="40" ImageSource="comment.png" BackgroundColor="#eb268f"></Button>
+                </Grid>
+            </Frame>
+
+            <Grid Grid.Row="2" RowDefinitions="auto,*" RowSpacing="8">
+                <Label Grid.Row="0" Text="Amenities" FontAttributes="Bold" TextColor="Black" FontSize="18"/>
+                <Frame Grid.Row="1" BorderColor="Transparent" CornerRadius="15" BackgroundColor="White">
+                    <StackLayout Spacing="6">
+                        <Grid ColumnDefinitions="6.5*,3.5*">
+                            <Label Grid.Column="0" Text="Swimming Pool"/>
+                            <Label Grid.Column="1" Text="Pet Allowed"/>
+                        </Grid>
+                        <Border VerticalOptions="End" HeightRequest="1" BackgroundColor="black"/>
+                        <Grid ColumnDefinitions="6.5*,3.5*">
+                            <Label Grid.Column="0" Text="Single Family"/>
+                            <Label Grid.Column="1" Text="Balcony"/>
+                        </Grid>
+                        <Border VerticalOptions="End" HeightRequest="1" BackgroundColor="black"/>
+                        <Grid ColumnDefinitions="6.5*,3.5*">
+                            <Label Grid.Column="0" Text="Garage"/>
+                            <Label Grid.Column="1" Text="Terrace"/>
+                        </Grid>
+                        <Border VerticalOptions="End" HeightRequest="1" BackgroundColor="black"/>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </Grid>
+        
+    </Grid>
+</ContentPage>

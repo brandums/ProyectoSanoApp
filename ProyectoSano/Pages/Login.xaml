@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoSano.Pages.Login"
+             Title="Login"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid Padding="20">
+        <StackLayout x:Name="LoginForm"
+                 VerticalOptions="Center" Spacing="15">
+            <Label Text="Inicio de Sesión" TextColor="#000000" HorizontalOptions="Center" FontSize="22" FontAttributes="Bold"/>
+            <Entry Placeholder="Correo electrónico"
+               x:Name="LoginEmail"
+               Keyboard="Email" />
+            <Entry Placeholder="Contraseña"
+               x:Name="LoginPassword"
+               IsPassword="True" />
+            <Grid HorizontalOptions="End" ColumnDefinitions="7*, 3*">
+                <Switch Grid.Column="1"
+                x:Name="ShowPasswordSwitch"
+                Toggled="OnShowPasswordToggled"
+                HorizontalOptions="End"
+                VerticalOptions="End" />
+                <Label Grid.Column="0"
+               Text="Mostrar contraseña"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            </Grid>
+            <Button Text="Iniciar Sesión" Margin="50, 0" Clicked="LoginButtonClicked"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

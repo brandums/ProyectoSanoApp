@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoSano.Pages.Retos"
+             Title="Retos"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid>
+        <Grid RowDefinitions="2*,7.6*,0.4*" Padding="0,0,0,10">
+            <Grid Grid.Row="0" RowDefinitions="5.8*,4.2*" Padding="0">
+                <Grid Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" Padding="15">
+                    <Image Source="logo.jpg" Aspect="AspectFill"/>
+                </Grid>
+
+                <Grid Grid.Row="1" BackgroundColor="LightGray" Padding="20,0">
+                    <Label Text="Retos diarios que debes cumplir para que logres bajar de peso" TextColor="#ec268f" FontSize="24" FontAttributes="Bold" 
+                           VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Grid.Shadow>
+                        <Shadow Brush="Black" Radius="25" Opacity="0.4" Offset="0,6"/>
+                    </Grid.Shadow>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="1" Padding="20,30,60,20">
+                <StackLayout Spacing="15">
+                    <Grid ColumnDefinitions="130,*" HeightRequest="80">
+                        <Frame Grid.Column="0" BorderColor="#00afef" BackgroundColor="#00afef" Padding="0">
+                            <Image Source="dotnet_bot.png" WidthRequest="70"/>
+                        </Frame>
+
+                        <Frame Grid.Column="1" BorderColor="Transparent" CornerRadius="0" HeightRequest="60" Padding="15,0" HasShadow="True">
+                            <Frame.Shadow>
+                                <Shadow Brush="Black" Radius="25" Opacity="0.4" Offset="0,6"/>
+                            </Frame.Shadow>
+                            <Label Text="Beber 8 vasos de agua con zumo de limón y una pizca de sal" FontSize="16" TextColor="#000000" VerticalTextAlignment="Center"/>
+                        </Frame>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="130,*" HeightRequest="80">
+                        <Frame Grid.Column="0" BorderColor="#00afef" BackgroundColor="#00afef" Padding="0">
+                            <Image Source="dotnet_bot.png" WidthRequest="70"/>
+                        </Frame>
+
+                        <Frame Grid.Column="1" BorderColor="Transparent" CornerRadius="0" HeightRequest="60" Padding="15,0" HasShadow="True">
+                            <Frame.Shadow>
+                                <Shadow Brush="Black" Radius="25" Opacity="0.4" Offset="0,6"/>
+                            </Frame.Shadow>
+                            <Label Text="Caminar a una intensidad media 3 kilometros" FontSize="16" TextColor="#000000" VerticalTextAlignment="Center"/>
+                        </Frame>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="130,*" HeightRequest="80">
+                        <Frame Grid.Column="0" BorderColor="#00afef" BackgroundColor="#00afef" Padding="0">
+                            <Image Source="dotnet_bot.png" WidthRequest="70"/>
+                        </Frame>
+
+                        <Frame Grid.Column="1" BorderColor="Transparent" CornerRadius="0" HeightRequest="60" Padding="15,0" HasShadow="True">
+                            <Frame.Shadow>
+                                <Shadow Brush="Black" Radius="25" Opacity="0.4" Offset="0,6"/>
+                            </Frame.Shadow>
+                            <Label Text="No comer ni tomar nada que contenga azucar" FontSize="16" TextColor="#000000" VerticalTextAlignment="Center"/>
+                        </Frame>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="130,*" HeightRequest="80">
+                        <Frame Grid.Column="0" BorderColor="#00afef" BackgroundColor="#00afef" Padding="0">
+                            <Image Source="dotnet_bot.png" WidthRequest="70"/>
+                        </Frame>
+
+                        <Frame Grid.Column="1" BorderColor="Transparent" CornerRadius="0" HeightRequest="60" Padding="15,0" HasShadow="True">
+                            <Frame.Shadow>
+                                <Shadow Brush="Black" Radius="25" Opacity="0.4" Offset="0,6"/>
+                            </Frame.Shadow>
+                            <Label Text="No comer nada que contenga grasa vegetal o que sea frito" FontSize="16" TextColor="#000000" VerticalTextAlignment="Center"/>
+                        </Frame>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="130,*" HeightRequest="80">
+                        <Frame Grid.Column="0" BorderColor="#00afef" BackgroundColor="#00afef" Padding="0">
+                            <Image Source="dotnet_bot.png" WidthRequest="70"/>
+                        </Frame>
+
+                        <Frame Grid.Column="1" BorderColor="Transparent" CornerRadius="0" HeightRequest="60" Padding="15,0" HasShadow="True">
+                            <Frame.Shadow>
+                                <Shadow Brush="Black" Radius="25" Opacity="0.4" Offset="0,6"/>
+                            </Frame.Shadow>
+                            <Label Text="Evitar comer más de lo que debes comer" FontSize="16" TextColor="#000000" VerticalTextAlignment="Center"/>
+                        </Frame>
+                    </Grid>
+                </StackLayout>
+            </Grid>
+
+            <Grid Grid.Row="2" HorizontalOptions="Center">
+                <Frame Grid.Row="2" Background="Transparent" BorderColor="Black" CornerRadius="6" Padding="60,0">
+                    <Grid ColumnDefinitions="auto,45" ColumnSpacing="8" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image Grid.Column="1" Source="dotnet_bot.png"/>
+                        <Label Grid.Column="0" Text="Contactanos" TextColor="Black" FontSize="20" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>

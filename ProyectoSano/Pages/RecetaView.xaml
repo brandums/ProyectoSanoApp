@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoSano.Pages.RecetaView"
+             Title="RecetaView"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid>
+        <Grid RowDefinitions="3*,6.6*,0.4*" Padding="0,0,0,10">
+            <Grid Grid.Row="0" BackgroundColor="#a8cf45" RowDefinitions="8*,2*" Padding="0,10,0,10">
+                <Grid Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Image Source="logo.jpg" Aspect="AspectFill"/>
+                </Grid>
+
+                <Label Grid.Row="1" Text="{Binding Subtitulo}" TextColor="White" FontSize="20" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <Border Grid.Row="1" VerticalOptions="End" HeightRequest="4" WidthRequest="150" BackgroundColor="White"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid HeightRequest="50" BackgroundColor="#a8cf45" VerticalOptions="Start"></Grid>
+
+                <Frame BorderColor="White" CornerRadius="25" BackgroundColor="White" Padding="40,25">
+                    <Grid RowDefinitions="auto,auto" RowSpacing="30">
+                        <Grid Grid.Row="0">
+                            <CollectionView x:Name="ingredientes" ItemsSource="{Binding Ingredientes}">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout Orientation="Horizontal" Margin="0,5,0,0">
+                                            <Label Text="• " FontSize="20" VerticalOptions="Center" />
+                                            <Label Text="{Binding}" FontSize="20" VerticalOptions="Center" />
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </Grid>
+
+                        <StackLayout Grid.Row="1" Spacing="10">
+                            <Grid>
+                                <Label Text="Preparación" TextColor="Black" FontSize="20" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,0,0,5"/>
+                                <Border VerticalOptions="End" HeightRequest="4" WidthRequest="150" BackgroundColor="Black"/>
+                            </Grid>
+
+                            <CollectionView x:Name="preparacion" ItemsSource="{Binding Preparacion}">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout Orientation="Vertical" Margin="0,5,0,0">
+                                            <Label FontSize="20" LineBreakMode="WordWrap" MaxLines="5">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="• " FontSize="20" />
+                                                        <Span Text="{Binding}" FontSize="20" />
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="2" HorizontalOptions="Center">
+                <Frame Grid.Row="2" Background="Transparent" BorderColor="Black" CornerRadius="6" Padding="60,0">
+                    <Grid ColumnDefinitions="auto,45" ColumnSpacing="8" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image Grid.Column="1" Source="dotnet_bot.png"/>
+                        <Label Grid.Column="0" Text="Contactanos" TextColor="Black" FontSize="20" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>

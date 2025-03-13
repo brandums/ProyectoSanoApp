@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoSano.Pages.RecetasPage"
+             Title="RecetasPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid>
+        <Grid RowDefinitions="1.5*,8.1*,0.4*" Padding="0, 10">
+            <Grid RowDefinitions="6.5*,3.5*" RowSpacing="8">
+                <Grid Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Image Source="logo.jpg"/>
+                </Grid>
+
+                <Frame Grid.Row="1" Padding="0" CornerRadius="0" HasShadow="True" BorderColor="Transparent">
+                    <Frame.Shadow>
+                        <Shadow Brush="Black" Radius="10" Opacity="0.5" Offset="0,9"/>
+                    </Frame.Shadow>
+                    <Grid x:Name="categories" BackgroundColor="LightGray" ColumnDefinitions="auto,auto,auto,auto,auto,auto">
+                        <Label Grid.Column="0" Text="Desayunos" TextColor="#a8cf45" FontSize="16" FontAttributes="Bold" Padding="8" BackgroundColor="White">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnCategoryTapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Border x:Name="desayunosBorder" IsVisible="True" Grid.Column="0" Grid.ColumnSpan="1" HeightRequest="5" VerticalOptions="End" BackgroundColor="#a8cf45"></Border>
+                        
+                        <Label Grid.Column="1" Text="Almuerzos" TextColor="#ec268f" FontSize="16" FontAttributes="Bold" Padding="8">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnCategoryTapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Border x:Name="almuerzosBorder" IsVisible="False" Grid.Column="1" Grid.ColumnSpan="1" HeightRequest="5" VerticalOptions="End" BackgroundColor="#a8cf45"></Border>
+                        
+                        <Label Grid.Column="2" Text="Ensaladas" TextColor="#ec268f" FontSize="16" FontAttributes="Bold" Padding="8">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnCategoryTapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Border x:Name="ensaladasBorder" IsVisible="False" Grid.Column="2" Grid.ColumnSpan="1" HeightRequest="5" VerticalOptions="End" BackgroundColor="#a8cf45"></Border>
+                        
+                        <Label Grid.Column="3" Text="Postres" TextColor="#ec268f" FontSize="16" FontAttributes="Bold" Padding="8">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnCategoryTapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Border x:Name="postresBorder" IsVisible="False" Grid.Column="3" Grid.ColumnSpan="1" HeightRequest="5" VerticalOptions="End" BackgroundColor="#a8cf45"></Border>
+                        
+                        <Label Grid.Column="4" Text="Cenas" TextColor="#ec268f" FontSize="16" FontAttributes="Bold" Padding="8">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnCategoryTapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Border x:Name="cenasBorder" IsVisible="False" Grid.Column="4" Grid.ColumnSpan="1" HeightRequest="5" VerticalOptions="End" BackgroundColor="#a8cf45"></Border>
+                        
+                        <Label Grid.Column="5" Text="Otros" TextColor="#ec268f" FontSize="16" FontAttributes="Bold" Padding="8">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnCategoryTapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Border x:Name="otrosBorder" IsVisible="False" Grid.Column="5" Grid.ColumnSpan="1" HeightRequest="5" VerticalOptions="End" BackgroundColor="#a8cf45"></Border>
+                    </Grid>
+
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="1" Padding="15">
+                <CollectionView x:Name="Recetas" ItemsSource="{Binding RecetasFiltradas}">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="3" HorizontalItemSpacing="8"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid BackgroundColor="White"  Padding="0" HeightRequest="130">
+                                <Grid RowDefinitions="6.5*,3.5*" Padding="0.5,0,0.5,5">
+                                    <Frame Grid.Row="1" BorderColor="White" Padding="0,10,0,0" CornerRadius="0" HasShadow="True" Margin="0,-15,0,0">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="redirectTapped"/>
+                                        </Frame.GestureRecognizers>
+                                        <Frame.Shadow>
+                                            <Shadow Brush="Black" Radius="25" Opacity="0.4" Offset="0,3"/>
+                                        </Frame.Shadow>
+                                        <Label Text="{Binding Nombre}" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" LineHeight="0.7"/>
+                                    </Frame>
+
+                                    <Frame Grid.Row="0" CornerRadius="20" BorderColor="Transparent" Padding="0">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="redirectTapped"/>
+                                        </Frame.GestureRecognizers>
+                                        <Image Source="{Binding Imagen}" Aspect="AspectFill"/>
+                                    </Frame>
+                                </Grid>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+
+            <Grid Grid.Row="2" HorizontalOptions="Center">
+                <Frame Grid.Row="2" Background="Transparent" BorderColor="Black" CornerRadius="6" Padding="60,0">
+                    <Grid ColumnDefinitions="auto,45" ColumnSpacing="8" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image Grid.Column="1" Source="dotnet_bot.png"/>
+                        <Label Grid.Column="0" Text="Contactanos" TextColor="Black" FontSize="20" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>
